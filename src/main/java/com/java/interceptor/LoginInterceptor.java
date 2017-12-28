@@ -21,7 +21,6 @@ public class LoginInterceptor implements HandlerInterceptor {
             System.out.println("need login");
         }
 
-
         return true;
     }
 
