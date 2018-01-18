@@ -18,9 +18,10 @@
 
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/**" />
+            <mvc:mapping path="/test/**/v2/**" />
             <bean class="com.java.interceptor.LoginInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 
+    <import resource="dubbo-contex.xml"/>
 </beans>

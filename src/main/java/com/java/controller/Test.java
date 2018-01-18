@@ -18,14 +18,13 @@ public class Test {
 
     @NoLogin
     @ResponseBody
-    @RequestMapping("login")
+    @RequestMapping("/test/user/v2/login")
     public String testLogin(HttpServletRequest request){
-        RequetsUtil.getIpAddr(request);
         return "login";
     }
 
     @ResponseBody
-    @RequestMapping("noLogin")
+    @RequestMapping("/test/user/v2/noLogin")
     public String testNoLogin(){
         return "no login";
     }
@@ -37,4 +36,5 @@ public class Test {
 
         return "success";
     }
+
 }
