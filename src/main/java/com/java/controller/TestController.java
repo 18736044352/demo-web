@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by iss on 17/12/20.
  */
 @Controller
-public class Test {
+public class TestController {
 
     @NoLogin
     @ResponseBody
