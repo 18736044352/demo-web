@@ -9,12 +9,13 @@
 	    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
         <!-- 当前应用信息配置 -->
-        <dubbo:application name="demo-dubbo" logger="slf4j"/>
+        <dubbo:application name="demo-web" logger="slf4j"/>
         <!-- 连接注册中心配置 -->
-        <dubbo:registry address="127.0.0.1:2181" client="curator" protocol="zookeeper" file="demo-dubbo.properties"/>
+        <dubbo:registry address="127.0.0.1:2181" client="curator" protocol="zookeeper" file="demo-web.properties"/>
         <!-- 暴露服务协议配置 -->
-        <dubbo:protocol port="7070"/>
-        <dubbo:consumer check="false" cluster="failover"/>
-        <dubbo:provider retries="0"/>
+        <dubbo:consumer check="false" timeout="20000" cluster="failover"/>
+        <dubbo:provider timeout="20000"/>
+
+        <dubbo:reference interface="com.java.interfaces.DubboInterface" id="dubboService" />
 
 </beans>

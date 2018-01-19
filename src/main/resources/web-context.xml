@@ -24,4 +24,5 @@
     </mvc:interceptors>
 
     <import resource="dubbo-contex.xml"/>
+
 </beans>
